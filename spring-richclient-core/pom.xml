@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.richclient</groupId>
         <artifactId>spring-richclient</artifactId>
-        <version>3.0.0</version>
+        <version>3.0.1</version>
     </parent>
 
     <artifactId>spring-richclient-core</artifactId>
@@ -19,11 +19,6 @@
             <groupId>org.springframework.richclient</groupId>
             <artifactId>spring-richclient-resources</artifactId>
             <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.richclient</groupId>
-            <artifactId>spring-richclient-resources</artifactId>
-            <type>test-jar</type>
         </dependency>
 
         <!-- Dependency injection -->
