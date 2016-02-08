@@ -29,7 +29,7 @@ import org.springframework.util.ClassUtils;
  * @author Keith Donald
  */
 public abstract class BeanTableModel extends BaseTableModel {
-    private BeanWrapper beanWrapper = new BeanWrapperImpl();
+    private BeanWrapperImpl beanWrapper = new BeanWrapperImpl();
 
     private Class beanClass;
 

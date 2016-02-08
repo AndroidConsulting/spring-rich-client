@@ -37,7 +37,7 @@ import org.springframework.binding.value.support.ValueHolder;
  */
 public class BeanPropertyAccessStrategy extends AbstractPropertyAccessStrategy {
 
-    private final BeanWrapper beanWrapper;
+    private final BeanWrapperImpl beanWrapper;
 
     /**
      * Creates a new instance of BeanPropertyAccessStrategy that will provide access

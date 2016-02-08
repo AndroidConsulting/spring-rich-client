@@ -21,6 +21,10 @@ public class ApplicationWindowScope implements Scope {
         
     }
 
+    public Object resolveContextualObject(String s) {
+        return null;
+    }
+
     public Object remove(String name) {
         return null;
     }

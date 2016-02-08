@@ -17,6 +17,7 @@ package org.springframework.binding.validation.support;
 
 import java.beans.PropertyDescriptor;
 import java.beans.PropertyEditor;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -41,6 +42,8 @@ import org.springframework.binding.validation.ValidationResults;
 import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.ReflectiveVisitorHelper;
+import org.springframework.core.convert.ConversionService;
+import org.springframework.core.convert.TypeDescriptor;
 import org.springframework.richclient.application.ApplicationServicesLocator;
 import org.springframework.richclient.core.Severity;
 import org.springframework.util.Assert;
@@ -311,8 +314,28 @@ public class ValangRichValidator implements RichValidator {
             throw new UnsupportedOperationException("Not implemented");
         }
 
+        public void setAutoGrowNestedPaths(boolean b) {
+
+        }
+
+        public boolean isAutoGrowNestedPaths() {
+            return false;
+        }
+
+        public void setAutoGrowCollectionLimit(int i) {
+
+        }
+
+        public int getAutoGrowCollectionLimit() {
+            return 0;
+        }
+
         public Class getPropertyType(String propertyName) throws BeansException {
             throw new UnsupportedOperationException("Not implemented");
+        }
+
+        public TypeDescriptor getPropertyTypeDescriptor(String s) throws BeansException {
+            return null;
         }
 
         public boolean isReadableProperty(String propertyName) throws BeansException {
@@ -348,6 +371,14 @@ public class ValangRichValidator implements RichValidator {
             throw new UnsupportedOperationException("Not implemented");
         }
 
+        public void setConversionService(ConversionService conversionService) {
+
+        }
+
+        public ConversionService getConversionService() {
+            return null;
+        }
+
         public void setExtractOldValueForEditor(boolean extractOldValueForEditor){
             throw new UnsupportedOperationException("Not implemented");
         }
@@ -363,6 +394,10 @@ public class ValangRichValidator implements RichValidator {
         public Object convertIfNecessary(Object object, Class aClass, MethodParameter methodParameter)
                 throws TypeMismatchException {
             throw new UnsupportedOperationException("Not implemented");
+        }
+
+        public <T> T convertIfNecessary(Object o, Class<T> aClass, Field field) throws TypeMismatchException {
+            return null;
         }
     }
 }

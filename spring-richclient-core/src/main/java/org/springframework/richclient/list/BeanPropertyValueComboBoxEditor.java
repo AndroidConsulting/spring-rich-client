@@ -13,7 +13,7 @@ import org.springframework.beans.BeanWrapperImpl;
  */
 public class BeanPropertyValueComboBoxEditor implements ComboBoxEditor {
 
-    private final BeanWrapper beanWrapper = new BeanWrapperImpl();
+    private final BeanWrapperImpl beanWrapper = new BeanWrapperImpl();
 
     private Object current;
 

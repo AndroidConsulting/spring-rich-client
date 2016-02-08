@@ -42,14 +42,14 @@ import org.springframework.beans.BeanWrapperImpl;
 public class BeanTableCellRenderer extends DefaultTableCellRenderer {
     private static final Log log = LogFactory.getLog(BeanTableCellRenderer.class);
 
-    private BeanWrapper beanWrapper;
+    private BeanWrapperImpl beanWrapper;
 
     public BeanTableCellRenderer() {
         super();
     }
 
     public BeanTableCellRenderer(BeanWrapper wrapper) {
-        beanWrapper = wrapper;
+        beanWrapper = (BeanWrapperImpl)wrapper;
     }
 
     public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus,

@@ -24,6 +24,7 @@ import java.util.Map;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
+import org.springframework.beans.factory.config.PropertiesFactoryBean;
 import org.springframework.binding.convert.ConversionService;
 import org.springframework.binding.form.FieldFaceSource;
 import org.springframework.binding.form.FormModel;
@@ -36,7 +37,6 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.context.support.ResourceBundleMessageSource;
-import org.springframework.context.support.ResourceMapFactoryBean;
 import org.springframework.core.enums.LabeledEnumResolver;
 import org.springframework.core.enums.StaticLabeledEnumResolver;
 import org.springframework.core.io.ClassPathResource;
@@ -876,7 +876,7 @@ public class DefaultApplicationServices implements ApplicationServices, Applicat
         public Object build( DefaultApplicationServices applicationServices ) {
             logger.info( "Creating default service impl: ImageSource" );
             try {
-                ResourceMapFactoryBean imageResourcesFactory = new ResourceMapFactoryBean();
+                PropertiesFactoryBean imageResourcesFactory = new PropertiesFactoryBean();
                 imageResourcesFactory.setLocation(new ClassPathResource("org/springframework/richclient/image/images.properties"));
                 imageResourcesFactory.afterPropertiesSet();
 				return new DefaultImageSource((Map)imageResourcesFactory.getObject());
